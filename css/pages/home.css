@@ -1,0 +1,86 @@
+.home-page {
+    background: url('../images/background.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hero {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.cover {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cover h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.statement {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn.outline {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.btn.outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

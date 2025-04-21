@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannibal P. Davis - Resume</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/pages/resume.css">
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images/profile.webp" alt="Hannibal P. Davis" class="profile-img" loading="lazy" width="50" height="50">
+                <div class="name-title">
+                    <h1>Hannibal P. Davis</h1>
+                    <p>Senior Software Engineer</p>
+                </div>
+            </div>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <nav class="header-center" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="resume.html" class="nav-link active">Resume</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <img src="images/social-icons/telegram.svg" alt="Telegram" width="24" height="24">
+                    </a>
+                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="images/social-icons/whatsapp.svg" alt="WhatsApp" width="24" height="24">
+                    </a>
+                    <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="images/social-icons/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/social-icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="section">
+                <h2>Bio Data</h2>
+                <p>Email: <a href="mailto:hannibal.davis@example.com">hannibal.davis@example.com</a></p>
+                <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                <p>Location: San Francisco, CA</p>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Stanford University</h3>
+                    <p>M.S. Computer Science (2015-2017)</p>
+                    <p>Specialization: Artificial Intelligence</p>
+                </div>
+                <div class="education-item">
+                    <h3>MIT</h3>
+                    <p>B.S. Computer Science (2011-2015)</p>
+                    <p>GPA: 3.9/4.0</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Work Experience</h2>
+                <div class="experience-item">
+                    <h3>Lead Developer - Tech Corp</h3>
+                    <p class="date">2019-Present</p>
+                    <ul>
+                        <li>Led team of 15 developers in AI projects</li>
+                        <li>Developed machine learning pipelines</li>
+                        <li>Implemented CI/CD workflows</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Senior Developer - Innovate Inc</h3>
+                    <p class="date">2017-2019</p>
+                    <ul>
+                        <li>Designed RESTful APIs</li>
+                        <li>Optimized database performance</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li class="project-item" onclick="showProject('ai-assistant')">
+                        <h3>AI Personal Assistant</h3>
+                        <p>Natural Language Processing Application</p>
+                    </li>
+                    <li class="project-item" onclick="showProject('blockchain')">
+                        <h3>Blockchain Voting System</h3>
+                        <p>Secure Digital Voting Platform</p>
+                    </li>
+                    <li class="project-item" onclick="showProject('health-analytics')">
+                        <h3>Health Analytics Dashboard</h3>
+                        <p>Real-time patient monitoring system</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div id="project-details">
+        <span class="close-btn" onclick="closeProject()">&times;</span>
+        <div id="project-content"></div>
+    </div>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Hannibal P. Davis. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script>
+        const projects = {
+            'ai-assistant': {
+                title: 'AI Personal Assistant',
+                details: `
+                    <h2>AI Personal Assistant</h2>
+                    <p class="project-meta">Completed: June 2022 | Technologies: Python, TensorFlow, NLP</p>
+                    <p>Developed an AI-powered personal assistant using NLP and machine learning that understands natural language commands and performs tasks autonomously.</p>
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>Natural language understanding with 95% accuracy</li>
+                        <li>Task automation for common workflows</li>
+                        <li>Calendar integration with Google Calendar API</li>
+                        <li>Voice recognition and synthesis</li>
+                    </ul>
+                    <h3>Impact:</h3>
+                    <p>Reduced time spent on routine tasks by 40% for over 500 daily users.</p>
+                `
+            },
+            'blockchain': {
+                title: 'Blockchain Voting System',
+                details: `
+                    <h2>Secure Voting System</h2>
+                    <p class="project-meta">Completed: March 2021 | Technologies: Solidity, Ethereum, React</p>
+                    <p>Created a blockchain-based voting platform for secure, transparent elections with immutable records.</p>
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>Immutable transaction records on Ethereum blockchain</li>
+                        <li>End-to-end encryption for voter privacy</li>
+                        <li>Real-time results dashboard</li>
+                        <li>Voter identity verification system</li>
+                    </ul>
+                    <h3>Impact:</h3>
+                    <p>Successfully deployed for student government elections with 10,000+ participants.</p>
+                `
+            },
+            'health-analytics': {
+                title: 'Health Analytics Dashboard',
+                details: `
+                    <h2>Health Analytics Dashboard</h2>
+                    <p class="project-meta">Completed: November 2020 | Technologies: Python, Django, D3.js</p>
+                    <p>Developed a real-time patient monitoring system for hospitals to track vital signs and predict health events.</p>
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>Real-time data visualization of patient vitals</li>
+                        <li>Machine learning models for early warning</li>
+                        <li>Integration with hospital EHR systems</li>
+                        <li>Role-based access control</li>
+                    </ul>
+                    <h3>Impact:</h3>
+                    <p>Reduced critical event response time by 35% at 3 major hospitals.</p>
+                `
+            }
+        };
+
+        function showProject(projectId) {
+            const detailsSection = document.getElementById('project-details');
+            const contentDiv = document.getElementById('project-content');
+            contentDiv.innerHTML = projects[projectId].details;
+            detailsSection.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProject() {
+            document.getElementById('project-details').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
