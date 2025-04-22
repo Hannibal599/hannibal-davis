@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Hannibal P. Davis</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <style>
+        .terms-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .terms-section {
+            margin-bottom: 2rem;
+        }
+        .terms-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .terms-section ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images/profile_photo.jpg" alt="Hannibal P. Davis" class="profile-img" loading="lazy" width="50" height="50">
+                <div class="name-title">
+                    <h1>Hannibal P. Davis</h1>
+                    <p>Final Year Student</p>
+                </div>
+            </div>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <nav class="header-center" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://t.me/hannibaldavis" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <img src="images/telegram/telegram.svg" alt="Telegram" width="24" height="24">
+                    </a>
+                    <a href="https://wa.me/+231555629357" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="images/whatsapp/whatsapp-48.svg" alt="WhatsApp" width="24" height="24">
+                    </a>
+                    <a href="https://facebook.com/hannibaldavis" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="images/facebook/facebook-48.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://linkedin.com/in/hannibal-davis-p" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/telegram/telegram.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="section terms-content">
+                <h1>Terms of Service</h1>
+                <p class="update-date">Last Updated: [Insert Date]</p>
+                
+                <div class="terms-section">
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing this website, you agree to be bound by these Terms of Service.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>2. Intellectual Property</h2>
+                    <p>All content including:</p>
+                    <ul>
+                        <li>Text</li>
+                        <li>Images</li>
+                        <li>Design elements</li>
+                    </ul>
+                    <p>are property of Hannibal P. Davis unless otherwise stated.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>3. User Responsibilities</h2>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>Use content illegally</li>
+                        <li>Attempt unauthorized access</li>
+                        <li>Disrupt website functionality</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>4. Limitation of Liability</h2>
+                    <p>We are not liable for:</p>
+                    <ul>
+                        <li>Third-party content</li>
+                        <li>Technical issues beyond our control</li>
+                        <li>Indirect damages from website use</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>5. Changes to Terms</h2>
+                    <p>We may update these terms periodically. Check this page for updates.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Hannibal P. Davis. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
