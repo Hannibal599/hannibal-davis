@@ -36,17 +36,17 @@
             
             <div class="header-right">
                 <div class="social-icons">
-                     <a href="https://t.me/hannibaldavis" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-                        <img src="images/telegram.svg" alt="Telegram" width="24" height="24">
+                    <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <img src="images/social-icons/telegram.svg" alt="Telegram" width="24" height="24">
                     </a>
                     <a href="https://wa.me/+231555629357" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <img src="images/whatsapp-48.svg" alt="WhatsApp" width="24" height="24">
+                        <img src="images/social-icons/whatsapp.svg" alt="WhatsApp" width="24" height="24">
                     </a>
-                    <a href="https://facebook.com/Hannibal Davis" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <img src="images/facebook-48.svg" alt="Facebook" width="24" height="24">
+                    <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="images/social-icons/facebook.svg" alt="Facebook" width="24" height="24">
                     </a>
                     <a href="https://linkedin.com/in/hannibal-davis-p" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="images/linkedin-48.svg" alt="LinkedIn" width="24" height="24">
+                        <img src="images/social-icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
                     </a>
                 </div>
                 <button class="dark-mode-toggle" aria-label="Toggle dark mode">
@@ -105,35 +105,34 @@
                     <span class="skill-tag">HTML</span>
                     <span class="skill-tag">CSS</span>
                     <span class="skill-tag">PHP</span>
-
-
                 </div>
             </section>
 
             <section class="section">
                 <h2>Projects</h2>
                 <ul class="project-list">
-                    <li class="project-item" onclick="showProject('ai-assistant')">
-                        <h3>HanniSa</h3>
-                        <p>Advanced School Management Mobile Application</p>
+                    <li class="project-item">
+                        <a href="projects/hannisa.html">
+                            <h3>HanniSa</h3>
+                            <p>Advanced School Management Mobile Application</p>
+                        </a>
                     </li>
-                    <li class="project-item" onclick="showProject('blockchain')">
-                        <h3>High School Management System</h3>
-                        <p>Desktop Base Excel School System </p>
+                    <li class="project-item">
+                        <a href="projects/e-Registration&GradesManagement.html">
+                            <h3>High School Management System</h3>
+                            <p>Desktop Base Excel School System</p>
+                        </a>
                     </li>
-                    <li class="project-item" onclick="showProject('health-analytics')">
-                        <h3>E-Commerce Website</h3>
-                        <p>Full E-Commerce Site with both Admin and Customers Panel</p>
+                    <li class="project-item">
+                        <a href="projects/ecommerce.html">
+                            <h3>E-Commerce Website</h3>
+                            <p>Full E-Commerce Site with both Admin and Customers Panel</p>
+                        </a>
                     </li>
                 </ul>
             </section>
         </div>
     </main>
-
-    <div id="project-details">
-        <span class="close-btn" onclick="closeProject()">&times;</span>
-        <div id="project-content"></div>
-    </div>
 
     <footer class="main-footer" role="contentinfo">
         <div class="footer-content">
@@ -148,73 +147,6 @@
     <script src="js/main.js"></script>
     <script src="js/dark-mode.js"></script>
     <script>
-        const projects = {
-            'ai-assistant': {
-                title: 'AI Personal Assistant',
-                details: `
-                    <h2>AI Personal Assistant</h2>
-                    <p class="project-meta">Completed: June 2022 | Technologies: Python, TensorFlow, NLP</p>
-                    <p>Developed an AI-powered personal assistant using NLP and machine learning that understands natural language commands and performs tasks autonomously.</p>
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li>Natural language understanding with 95% accuracy</li>
-                        <li>Task automation for common workflows</li>
-                        <li>Calendar integration with Google Calendar API</li>
-                        <li>Voice recognition and synthesis</li>
-                    </ul>
-                    <h3>Impact:</h3>
-                    <p>Reduced time spent on routine tasks by 40% for over 500 daily users.</p>
-                `
-            },
-            'blockchain': {
-                title: 'Blockchain Voting System',
-                details: `
-                    <h2>Secure Voting System</h2>
-                    <p class="project-meta">Completed: March 2021 | Technologies: Solidity, Ethereum, React</p>
-                    <p>Created a blockchain-based voting platform for secure, transparent elections with immutable records.</p>
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li>Immutable transaction records on Ethereum blockchain</li>
-                        <li>End-to-end encryption for voter privacy</li>
-                        <li>Real-time results dashboard</li>
-                        <li>Voter identity verification system</li>
-                    </ul>
-                    <h3>Impact:</h3>
-                    <p>Successfully deployed for student government elections with 10,000+ participants.</p>
-                `
-            },
-            'health-analytics': {
-                title: 'Health Analytics Dashboard',
-                details: `
-                    <h2>Health Analytics Dashboard</h2>
-                    <p class="project-meta">Completed: November 2020 | Technologies: Python, Django, D3.js</p>
-                    <p>Developed a real-time patient monitoring system for hospitals to track vital signs and predict health events.</p>
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li>Real-time data visualization of patient vitals</li>
-                        <li>Machine learning models for early warning</li>
-                        <li>Integration with hospital EHR systems</li>
-                        <li>Role-based access control</li>
-                    </ul>
-                    <h3>Impact:</h3>
-                    <p>Reduced critical event response time by 35% at 3 major hospitals.</p>
-                `
-            }
-        };
-
-        function showProject(projectId) {
-            const detailsSection = document.getElementById('project-details');
-            const contentDiv = document.getElementById('project-content');
-            contentDiv.innerHTML = projects[projectId].details;
-            detailsSection.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProject() {
-            document.getElementById('project-details').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
