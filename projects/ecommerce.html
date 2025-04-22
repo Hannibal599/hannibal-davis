@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website | Hannibal P. Davis</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <style>
+        .project-detail {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin: 2rem 0;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .project-features {
+            margin: 2rem 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        .project-meta {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="../images/profile_photo.jpg" alt="Hannibal P. Davis" class="profile-img" loading="lazy" width="50" height="50">
+                <div class="name-title">
+                    <h1>Hannibal P. Davis</h1>
+                    <p>Final Year Student</p>
+                </div>
+            </div>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <nav class="header-center" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../resume.html" class="nav-link">Resume</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                        <img src="../images/social-icons/telegram.svg" alt="Telegram" width="24" height="24">
+                    </a>
+                    <a href="https://wa.me/+231555629357" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="../images/social-icons/whatsapp.svg" alt="WhatsApp" width="24" height="24">
+                    </a>
+                    <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="../images/social-icons/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://linkedin.com/in/hannibal-davis-p" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="../images/social-icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="section project-detail">
+                <h1>E-Commerce Website</h1>
+                <p class="project-meta">Full E-Commerce Site with both Admin and Customers Panel</p>
+                
+                <img src="../images/projects/ecommerce.jpg" alt="E-Commerce Website" class="project-image">
+                
+                <h2>Project Description</h2>
+                <p>A complete e-commerce platform with separate interfaces for administrators and customers, featuring product management, shopping cart, checkout, and order processing.</p>
+                
+                <div class="project-features">
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>User registration and authentication</li>
+                        <li>Product catalog with categories and search</li>
+                        <li>Shopping cart and checkout process</li>
+                        <li>Admin dashboard for product and order management</li>
+                        <li>Payment gateway integration</li>
+                    </ul>
+                </div>
+                
+                <h3>Technologies Used:</h3>
+                <div class="skills">
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+                
+                <a href="../resume.html" class="back-link">← Back to Resume</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Hannibal P. Davis. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dark-mode.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
