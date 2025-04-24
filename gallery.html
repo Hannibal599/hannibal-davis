@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannibal P. Davis | Home</title>
+    <title>Hannibal P. Davis | Gallery</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
@@ -202,24 +202,24 @@
             <section class="section project-detail">
                 <div class="gallery">
                     <div class="gallery-item" onclick="openLightbox(0)">
-                        <img src="../images/gallery/profile_photo.jpg" alt="Login Screen">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox(0)">
-                        <img src="../images/projects/E-Registration/login.png" alt="Login Screen">
+                        <img src="../images/gallery/profile_photo.jpg" alt="Passport Photo">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(1)">
-                        <img src="../images/projects/E-Registration/E-Registration_Dashboard.PNG" alt="System Dashboard">
+                        <img src="../images/projects/E-Registration/login.png" alt="Login Screen">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(2)">
-                        <img src="../images/projects/E-Registration/Registration_form.PNG" alt="Student Registration Form">
+                        <img src="../images/projects/E-Registration/E-Registration_Dashboard.PNG" alt="System Dashboard">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(3)">
-                        <img src="../images/projects/E-Registration/receipt.PNG" alt="Students Receipt">
+                        <img src="../images/projects/E-Registration/Registration_form.PNG" alt="Student Registration Form">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(4)">
-                        <img src="../images/projects/E-Registration/grades_entry_form.PNG" alt="Grades Entry Form Tracking">
+                        <img src="../images/projects/E-Registration/receipt.PNG" alt="Students Receipt">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(5)">
+                        <img src="../images/projects/E-Registration/grades_entry_form.PNG" alt="Grades Entry Form Tracking">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(6)">
                         <img src="../images/projects/E-Registration/Student_Report_Card.PNG" alt="Students Report Card">
                     </div>
                 </div>
@@ -240,7 +240,97 @@
 
     <script src="js/main.js"></script>
     <script src="js/dark-mode.js"></script>
-    <script>
+        <script>
+        // Gallery images with captions
+        const images = [
+            { 
+                src: "../images/gallery/profile_photo.jpg", 
+                alt: "Passport Photo",
+                caption: "This is Passport Photo"
+            },
+            { 
+                src: "../images/projects/E-Registration/login.png", 
+                alt: "Login Screen",
+                caption: "User-friendly interface that give user access to the system"
+            },
+            { 
+                src: "../images/projects/E-Registration/E-Registration_Dashboard.png", 
+                alt: "E-Registration Dashboard",
+                caption: "System Dashboard with comprehensive total students, average students, yearly fees summary"
+            },
+            { 
+                src: "../images/projects/E-Registration/Registration_form.png", 
+                alt: "Students Registration Form",
+                caption: "Students Registration Form"
+            },
+            { 
+                src: "../images/projects/E-Registration/receipt.png", 
+                alt: "Student Receipt",
+                caption: "Automated Students Receipt"
+            },
+            { 
+                src: "../images/projects/E-Registration/Student_Report_Card.png", 
+                alt: "Student Report Card",
+                caption: "Automated Students Report Card"
+            }
+        ];
+        
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightboxImage();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(step) {
+            currentImageIndex += step;
+            if (currentImageIndex >= images.length) currentImageIndex = 0;
+            if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const img = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            img.src = images[currentImageIndex].src;
+            img.alt = images[currentImageIndex].alt;
+            caption.textContent = images[currentImageIndex].caption;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('lightbox-content').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        document.getElementById('lightbox-content').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) changeImage(1);
+            if (touchEndX > touchStartX + 50) changeImage(-1);
+        }
+
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
