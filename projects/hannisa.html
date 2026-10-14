@@ -72,6 +72,57 @@
             opacity: 1;
         }
         
+        /* Application download section */
+        .download-section {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .download-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.75rem;
+        }
+        
+        .download-section p {
+            margin-bottom: 1rem;
+        }
+        
+        .download-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 0.7rem 1rem;
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: opacity var(--transition-speed) ease;
+        }
+        
+        .download-btn:hover {
+            opacity: 0.85;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .download-buttons {
+                flex-direction: column;
+            }
+        
+            .download-btn {
+                text-align: center;
+            }
+        }
+
+        
         /* Lightbox styles */
         .lightbox {
             display: none;
